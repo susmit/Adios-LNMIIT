@@ -1,6 +1,6 @@
 const DEBUG = false;
 const REPETITION_COUNT = 2; // number of times each pixel is assigned to a canvas
-const NUM_FRAMES = 128;
+const NUM_FRAMES = 64;
 
 /**
 * Generates the individual subsets of pixels that are animated to create the effect
@@ -198,7 +198,9 @@ var x = setInterval(function() {
     if ($elm.disintegrated) {return;}
     $elm.disintegrated = true;
     disintegrate($elm);
-    document.getElementById('snap').play()
+    setTimeout(function(){
+      document.getElementById('snap').play()
+    },1000);
     //myFunction()
   });
 });
@@ -208,7 +210,9 @@ var x = setInterval(function() {
     if ($elm.disintegrated) {return;}
     $elm.disintegrated = true;
     disintegrate($elm);
-    document.getElementById('snap').play()
+    setTimeout(function(){
+      document.getElementById('snap').play()
+    },1000);
     //myFunction()
   });
 });

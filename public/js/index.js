@@ -1,6 +1,6 @@
 const DEBUG = false;
 const REPETITION_COUNT = 2; // number of times each pixel is assigned to a canvas
-const NUM_FRAMES = 64;
+const NUM_FRAMES = 128;
 
 /**
 * Generates the individual subsets of pixels that are animated to create the effect
@@ -86,6 +86,9 @@ function replaceElementVisually($old, $new) {
         `rotate(${15 * (Math.random() - 0.5)}deg) translate(${60 * Math.cos(randomRadian)}px, ${30 * Math.sin(randomRadian)}px)
 rotate(${15 * (Math.random() - 0.5)}deg)`;
         $frame.style.opacity = 0;
+        setTimeout(function(){
+          $frame.remove();
+        },3000);
 
       });
     } else {

@@ -177,16 +177,16 @@ var x = setInterval(function() {
         };
     })();
 
-    function redo(){
-      [...document.querySelectorAll(".disintegration-target")].forEach($elm => {
-        $elm.addEventListener("click", () => {
-          if ($elm.disintegrated) {return;}
-          $elm.disintegrated = true;
-          disintegrate($elm);
-          //myFunction()
-        });
-      });
-    }
+    // function redo(){
+    //   [...document.querySelectorAll(".disintegration-target")].forEach($elm => {
+    //     $elm.addEventListener("click", () => {
+    //       if ($elm.disintegrated) {return;}
+    //       $elm.disintegrated = true;
+    //       disintegrate($elm);
+    //       //myFunction()
+    //     });
+    //   });
+    // }
 
 /** === Below is just to bind the module and the DOM == */
 [...document.querySelectorAll(".disintegration-target")].forEach($elm => {
@@ -194,6 +194,7 @@ var x = setInterval(function() {
     if ($elm.disintegrated) {return;}
     $elm.disintegrated = true;
     disintegrate($elm);
+    document.getElementById('snap').play()
     //myFunction()
   });
 });
@@ -203,6 +204,7 @@ var x = setInterval(function() {
     if ($elm.disintegrated) {return;}
     $elm.disintegrated = true;
     disintegrate($elm);
+    document.getElementById('snap').play()
     //myFunction()
   });
 });

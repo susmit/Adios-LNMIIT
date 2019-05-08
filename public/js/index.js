@@ -86,8 +86,10 @@ function replaceElementVisually($old, $new) {
         `rotate(${15 * (Math.random() - 0.5)}deg) translate(${60 * Math.cos(randomRadian)}px, ${30 * Math.sin(randomRadian)}px)
 rotate(${15 * (Math.random() - 0.5)}deg)`;
         $frame.style.opacity = 0;
+        //document.getElementById('snap').play()
         setTimeout(function(){
           $frame.remove();
+          //document.getElementById('snap').play()
         },3000);
 
       });
@@ -198,9 +200,9 @@ var x = setInterval(function() {
     if ($elm.disintegrated) {return;}
     $elm.disintegrated = true;
     disintegrate($elm);
-    setTimeout(function(){
-      document.getElementById('snap').play()
-    },1000);
+    // setTimeout(function(){
+    //   document.getElementById('snap').play()
+    // },1000);
     //myFunction()
   });
 });
@@ -210,9 +212,9 @@ var x = setInterval(function() {
     if ($elm.disintegrated) {return;}
     $elm.disintegrated = true;
     disintegrate($elm);
-    setTimeout(function(){
-      document.getElementById('snap').play()
-    },1000);
+    // setTimeout(function(){
+    //   document.getElementById('snap').play()
+    // },1000);
     //myFunction()
   });
 });

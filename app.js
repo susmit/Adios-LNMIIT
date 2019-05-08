@@ -12,7 +12,9 @@ app.use('/public', express.static(path.join(__dirname, 'public')))
 var router = require('./route/main')
 router(app)
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000, function(){
+    console.log('Your adios-lnmiit server is running');
+});
 
 console.log("Running at Port 3000");
 

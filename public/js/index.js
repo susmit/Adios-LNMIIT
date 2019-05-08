@@ -68,7 +68,7 @@ function replaceElementVisually($old, $new) {
     // setup the frames for animation
     const $frames = generateFrames($canvas, NUM_FRAMES);
     $frames.forEach(($frame, i) => {
-      $frame.style.transitionDelay = `${1.35 * i / $frames.length}s`;
+      $frame.style.transitionDelay = `${0.50 * i / $frames.length}s`;
       $container.appendChild($frame);
     });
 
@@ -86,6 +86,7 @@ function replaceElementVisually($old, $new) {
         `rotate(${15 * (Math.random() - 0.5)}deg) translate(${60 * Math.cos(randomRadian)}px, ${30 * Math.sin(randomRadian)}px)
 rotate(${15 * (Math.random() - 0.5)}deg)`;
         $frame.style.opacity = 0;
+
       });
     } else {
       $frames.forEach($frame => {
@@ -109,20 +110,20 @@ rotate(${15 * (Math.random() - 0.5)}deg)`;
 }
 
 
-function myFunction() {
-  //const $parent = $old.offsetParent;
-  //var elem = document.createElement("img");
-  //elem.setAttribute("src", "/public/ironman.png");
-  //$parent.appendChild(elem);
-  var div = document.createElement('DIV');
-  div.setAttribute('class', "item disintegration-target");
-  var h = document.createElement("H1")                // Create a <h1> element
-  var t = document.createTextNode("Hello World");     // Create a text node
-  h.appendChild(t);
-  div.appendChild(h);  
-  //document.getElementById("line").appendChild(div);
-  document.body.appendChild(div)
-}
+// function myFunction() {
+//   //const $parent = $old.offsetParent;
+//   //var elem = document.createElement("img");
+//   //elem.setAttribute("src", "/public/ironman.png");
+//   //$parent.appendChild(elem);
+//   var div = document.createElement('DIV');
+//   div.setAttribute('class', "item disintegration-target");
+//   var h = document.createElement("H1")                // Create a <h1> element
+//   var t = document.createTextNode("Hello World");     // Create a text node
+//   h.appendChild(t);
+//   div.appendChild(h);  
+//   //document.getElementById("line").appendChild(div);
+//   document.body.appendChild(div)
+// }
 
 var countDownDate = new Date("May 10, 2019 12:00:00").getTime();
 
@@ -148,7 +149,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "TIME EXPIRED";
   }
 }, 1000);
 
@@ -169,13 +170,13 @@ var x = setInterval(function() {
       //   console.log("Waited 5s");
       // };
 
-      var delay = ( function() {
-        var timer = 0;
-        return function(callback, ms) {
-            clearTimeout (timer);
-            timer = setTimeout(callback, ms);
-        };
-    })();
+    //   var delay = ( function() {
+    //     var timer = 0;
+    //     return function(callback, ms) {
+    //         clearTimeout (timer);
+    //         timer = setTimeout(callback, ms);
+    //     };
+    // })();
 
     // function redo(){
     //   [...document.querySelectorAll(".disintegration-target")].forEach($elm => {
